@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_133810) do
+ActiveRecord::Schema.define(version: 2020_08_18_100607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,44 +19,54 @@ ActiveRecord::Schema.define(version: 2020_08_17_133810) do
     t.string "date"
     t.integer "total_price"
     t.integer "nb_of_persons"
-    t.bigint "visitor_id", null: false
-    t.bigint "experience_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "experience_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["experience_id"], name: "index_bookings_on_experience_id"
-    t.index ["visitor_id"], name: "index_bookings_on_visitor_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "experiences", force: :cascade do |t|
     t.string "title"
-    t.text "description"
+    t.string "short_description"
+    t.text "long_description"
     t.integer "price_per_person"
-    t.integer "nb_max_of_person"
-    t.bigint "seller_id", null: false
+    t.integer "nb_max_of_persons"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["seller_id"], name: "index_experiences_on_seller_id"
+    t.integer "average_rating"
+    t.boolean "is_online"
+    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
-  create_table "sellers", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "experience_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["experience_id"], name: "index_reviews_on_experience_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.string "first_name"
     t.string "last_name"
-    t.string "email"
-    t.string "password"
+    t.string "phone_number"
+    t.string "is_a_seller", default: "f"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "visitors", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "bookings", "experiences"
-  add_foreign_key "bookings", "visitors"
-  add_foreign_key "experiences", "sellers"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "experiences", "users"
+  add_foreign_key "reviews", "experiences"
 end
