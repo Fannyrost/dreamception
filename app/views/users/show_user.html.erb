@@ -1,0 +1,29 @@
+<h1>User#show</h1>
+<p>Find me in app/views/users/show_user.html.erb</p>
+<div class="container">
+  <div class= "box-profil d-flex justify-content-between">
+    <div class="">Mon profil</div>
+    <div class="">Modifier</div>
+  </div>
+  <div class="box-profil d-flex justify-content-between">
+    <div class="">
+    <p>Nom :<%= @user.last_name %></p>
+    <p>Prénom :<%= @user.first_name %></p>
+    </div>
+    <div class="">
+    <p>Email :<%=  @user.email %></p>
+    <p>Téléphone :<%=  @user.phone_number %></p>
+    </div>
+  </div>
+  <div class="container d-flex">
+    <div class="box-past-exp"> Expériences vécues
+      <% @user.bookings. %>
+      <div class="box-exp">
+        <div> <%= experience.title %></div>
+        <div> <%= experience.description %></div>
+        <div> <%= experience.average_rating %></div>
+      </div>
+
+    </div>
+  </div>
+</div>

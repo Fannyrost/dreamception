@@ -6,85 +6,59 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-Visitor.delete_all
+User.delete_all
 Booking.delete_all
 Experience.delete_all
-Seller.delete_all
-
-
-5.times do
-  v = Visitor.new(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
-    )
-  v.save!
-end
-
-s_one = Seller.new(
+Review.delete_all
+s_one = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           email: Faker::Internet.email,
+          password: Faker::Lorem.characters(number: 10),
+          is_a_seller: false
           )
 s_one.save!
-
-
-s_two = Seller.new(
+s_two = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           email: Faker::Internet.email,
+          password: Faker::Lorem.characters(number: 10),
+          is_a_seller: false
           )
 s_two.save!
-
-s_three = Seller.new(
+s_three = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           email: Faker::Internet.email,
+          password: Faker::Lorem.characters(number: 10),
+          is_a_seller: false
           )
 s_three.save!
-
-s_four = Seller.new(
+s_four = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           email: Faker::Internet.email,
+          password: Faker::Lorem.characters(number: 10),
+          is_a_seller: true
           )
 s_four.save!
-
-s_five = Seller.new(
+s_five = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
           email: Faker::Internet.email,
+          password: Faker::Lorem.characters(number: 10),
+          is_a_seller: false
           )
 s_five.save!
-
-
-sellers_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
-
-
+users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 10.times do
   e = Experience.new(
         title: Faker::Game.title,
-        description: Faker::Lorem.paragraph(sentence_count: 4),
+        short_description: Faker::Lorem.paragraph(sentence_count: 1),
+        long_description: Faker::Lorem.paragraph(sentence_count: 4),
         price_per_person: rand(50..350),
-        nb_max_of_person: rand(1..10),
-        seller_id: sellers_id.sample
+        nb_max_of_persons: rand(1..10),
+        user_id: users_id.sample
       )
   e.save!
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
