@@ -2,24 +2,24 @@
   <div class=banner style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527684651001-731c474bbb5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
     <div class=principal_presentation_card>
       <h1><%=@experience.title %></h1>
-      <p></p>
+      <a class=internal_links href="#reviews-list"><%=@experience.reviews.count %></a>
       <p><%=@experience.short_description %></p>
       <p><%=@experience.nb_max_of_persons %></p>
       <p><%= @experience.price_per_person %></p>
       <p class=button>Réserver!</p>
-      <p>+ Voir description détaillée</p>
+      <a class=internal_links href="#detailed-description">+ Voir description détaillée</p>
     </div>
   </div>
 
   <br><br><br><br><br><br><br><br><br><br><br><br>
   <div class=container>
 
-    <h3>Description détaillée</h3>
+    <h3 id="detailed-description">Description détaillée</h3>
     <div class=long_description_card>
       <p><%= @experience.long_description %></p>
     </div>
     <br><br><br>
-    <h3>Avis</h3>
+    <h3 id="reviews-list">Avis</h3>
     <% @experience.reviews.each do |review| %>
       <div class=review_card>
         <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
@@ -41,3 +41,7 @@
     t.integer "average_rating"
     t.boolean "is_online"
     t.index ["user_id"], name: "index_experiences_on_user_id" -->
+
+<!-- <p>link_to "Réserver", new_cocktail_path</p> -->
+
+<!-- new_experience_booking -->
