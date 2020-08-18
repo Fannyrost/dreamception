@@ -1,0 +1,46 @@
+<h1>page show</h1>
+
+
+<div class=principal_presentation_card>
+  <h1><%=@experience.title %></h1>
+  <p></p>
+  <p><%=@experience.short_description %></p>
+  <p><%=@experience.nb_max_of_persons %></p>
+  <p><%= @experience.price_per_person %></p>
+  <p>Réserver!</p>
+  <p>+ Voir description détaillée</p>
+</div>
+
+
+<div class=container>
+
+  <h2>Description détaillée</h2>
+  <div class=long_description_card>
+    <p><%= @experience.long_description %></p>
+  </div>
+
+  <h2>Avis</h2>
+  <div class=short_description_card>
+  <% @experience.reviews.each do |review| %>
+    <div>
+      <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
+      <h5><%= review.rating %></h5>
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+  </div>
+
+</div>
+
+
+<!--     t.string "title"
+    t.string "short_description"
+    t.text "long_description"
+    t.integer "price_per_person"
+    t.integer "nb_max_of_persons"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "average_rating"
+    t.boolean "is_online"
+    t.index ["user_id"], name: "index_experiences_on_user_id" -->

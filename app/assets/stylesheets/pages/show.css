@@ -1,0 +1,8 @@
+.principal_presentation_card {
+  border: solid 1px black;
+  width: 500px;
+}
+
+.body {
+  background-image: url("https://unsplash.com/photos/3n7DdlkMfEg");
+}
