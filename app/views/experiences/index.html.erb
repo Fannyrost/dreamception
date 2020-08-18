@@ -10,65 +10,45 @@
 <div class="container mt-5">
   <h2>Découvrez nos séjours en immersion</h2>
 
-  <h3>Sciences Fiction</h3>
-  <% @experiences.each do |experience| %>
-    <% if experience.category == "sciences fiction" %>
-      <div class="card-homepage">
-        <%= experience.title %>
-      </div>
+    <h3 class="mt-5 mb-2">Sciences Fiction</h3>
+    <% @experiences.each do |experience| %>
+      <% if experience.category == "sciences fiction" %>
+        <div class="card-homepage" style= "background-image: url('<% image_tag experience.photo_url %>')">
+          <%= experience.title %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <h3>Histoire</h3>
-  <% @experiences.each do |experience| %>
-    <% if experience.category == "histoire" %>
-      <div class="card-homepage">
-        <%= experience.title %>
-      </div>
+    <h3 class="mt-5 mb-2">Histoire</h3>
+    <% @experiences.each do |experience| %>
+      <% if experience.category == "histoire" %>
+        <div class="card-homepage" style= "background-image: url('<% image_tag experience.photo_url %>')">
+
+          <%= experience.title %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <h3>Sensations</h3>
-  <% @experiences.each do |experience| %>
-    <% if experience.category == "sensations" %>
-      <div class="card-homepage">
-        <%= experience.title %>
-      </div>
+    <h3 class="mt-5 mb-2">Sensations</h3>
+    <% @experiences.each do |experience| %>
+      <% if experience.category == "sensations" %>
+        <div class="card-homepage">
+          <%= experience.title %>
+          <%= experience.average_rating %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <h3>Insolite</h3>
-  <% @experiences.each do |experience| %>
-    <% if experience.category == "insolite" %>
-      <div class="card-homepage">
-        <%= experience.title %>
-      </div>
+    <h3 class="mt-5 mb-2">Insolite</h3>
+    <% @experiences.each do |experience| %>
+      <% if experience.category == "insolite" %>
+        <div class="card-homepage" style= "background-image: url('<% image_path experience.photo_url %>')">
+
+          <%= experience.title %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
 
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
-<p>text</p>
 
 </div>
