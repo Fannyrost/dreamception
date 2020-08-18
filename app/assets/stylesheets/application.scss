@@ -12,3 +12,23 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+
+
+// HTML Tags
+body {
+  background: $navy-blue;
+  color: $white-cream;
+}
+
+
+a {
+  text-decoration: none;
+  color: $salmon;
+  opacity: 0.8;
+
+  &:hover {
+   text-decoration: none;
+   color: $salmon;
+   opacity: 1;
+  }
+}

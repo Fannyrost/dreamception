@@ -12,6 +12,7 @@ Booking.delete_all
 Experience.delete_all
 Review.delete_all
 
+
 s_one = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
@@ -20,6 +21,8 @@ s_one = User.new(
           is_a_seller: false
           )
 s_one.save!
+
+
 s_two = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
@@ -28,6 +31,7 @@ s_two = User.new(
           is_a_seller: false
           )
 s_two.save!
+
 s_three = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
@@ -36,6 +40,7 @@ s_three = User.new(
           is_a_seller: false
           )
 s_three.save!
+
 s_four = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
@@ -44,6 +49,7 @@ s_four = User.new(
           is_a_seller: true
           )
 s_four.save!
+
 s_five = User.new(
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
@@ -53,6 +59,11 @@ s_five = User.new(
           )
 s_five.save!
 users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
+
+
+users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
+
+
 10.times do
   e = Experience.new(
         title: Faker::Game.title,
@@ -62,6 +73,7 @@ users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
         nb_max_of_persons: rand(1..10),
         user_id: users_id.sample
       )
+
   e.save!
 end
 
