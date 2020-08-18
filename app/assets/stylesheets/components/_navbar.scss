@@ -1,12 +1,25 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-transparent {
+  margin: 0px;
+  padding: 20px;
+  background: transparent;
+
+  h3 {
+    margin: 0;
+    padding: 0px 7px;
+    color: black;
+  }
+
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+.navbar-blue {
+  margin: 0px 0px;
+  padding: 20px;
+  background: $navy-blue;
+  box-shadow: 1px 4px 10px black;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  h3 {
+    margin: 0;
+    padding: 0px 7px;
+    color: $white-cream;
+  }
 }
