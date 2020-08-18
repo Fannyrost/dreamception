@@ -11,17 +11,17 @@
     <p>Prénom :<%= @user.first_name %></p>
     </div>
     <div class="">
-    <p>Email :<%=  @user.email %></p>
-    <p>Téléphone :<%=  @user.phone_number %></p>
+    <p>Email :<%= @user.email %></p>
+    <p>Téléphone :<%= @user.phone_number %></p>
     </div>
   </div>
   <div class="container d-flex">
     <div class="box-past-exp"> Expériences vécues
-      <% @user.bookings. %>
+      <% @user.past_bookings(@user.id) %>
       <div class="box-exp">
-        <div> <%= experience.title %></div>
-        <div> <%= experience.description %></div>
-        <div> <%= experience.average_rating %></div>
+        <div> <%= booking.experience.title %></div>
+        <div> <%= booking.experience.description %></div>
+        <div> <%= booking.experience.average_rating %></div>
       </div>
 
     </div>
