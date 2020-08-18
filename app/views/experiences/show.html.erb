@@ -1,6 +1,4 @@
-<h1>page show</h1>
-
-
+<div class=banner>
 <div class=principal_presentation_card>
   <h1><%=@experience.title %></h1>
   <p></p>
@@ -10,8 +8,9 @@
   <p>Réserver!</p>
   <p>+ Voir description détaillée</p>
 </div>
+</div>
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div class=container>
 
   <h2>Description détaillée</h2>
@@ -20,18 +19,14 @@
   </div>
 
   <h2>Avis</h2>
-  <div class=short_description_card>
   <% @experience.reviews.each do |review| %>
-    <div>
+    <div class=short_description_card>
       <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
       <h5><%= review.rating %></h5>
       <p><%= review.content %></p>
     </div>
   <% end %>
-  </div>
-
 </div>
-
 
 <!--     t.string "title"
     t.string "short_description"

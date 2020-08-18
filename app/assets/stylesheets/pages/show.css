@@ -1,8 +1,21 @@
 .principal_presentation_card {
   border: solid 1px black;
-  width: 500px;
+  width: 400px;
+  background-color: white;
+  display: absolute;
 }
 
-.body {
-  background-image: url("https://unsplash.com/photos/3n7DdlkMfEg");
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-size:cover;
+  height: 960px;
+  display: cover;
+}
+
+.long_description_card {
+  border: solid 1px black;
+}
+
+.short_description_card {
+  border: solid 1px black;
 }
