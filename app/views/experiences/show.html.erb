@@ -1,31 +1,33 @@
-<div class=banner>
-<div class=principal_presentation_card>
-  <h1><%=@experience.title %></h1>
-  <p></p>
-  <p><%=@experience.short_description %></p>
-  <p><%=@experience.nb_max_of_persons %></p>
-  <p><%= @experience.price_per_person %></p>
-  <p>Réserver!</p>
-  <p>+ Voir description détaillée</p>
-</div>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<div class=container>
-
-  <h2>Description détaillée</h2>
-  <div class=long_description_card>
-    <p><%= @experience.long_description %></p>
+<div class="background">
+  <div class=banner style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527684651001-731c474bbb5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+    <div class=principal_presentation_card>
+      <h1><%=@experience.title %></h1>
+      <p></p>
+      <p><%=@experience.short_description %></p>
+      <p><%=@experience.nb_max_of_persons %></p>
+      <p><%= @experience.price_per_person %></p>
+      <p class=button>Réserver!</p>
+      <p>+ Voir description détaillée</p>
+    </div>
   </div>
 
-  <h2>Avis</h2>
-  <% @experience.reviews.each do |review| %>
-    <div class=short_description_card>
-      <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
-      <h5><%= review.rating %></h5>
-      <p><%= review.content %></p>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class=container>
+
+    <h3>Description détaillée</h3>
+    <div class=long_description_card>
+      <p><%= @experience.long_description %></p>
     </div>
-  <% end %>
+    <br><br><br>
+    <h3>Avis</h3>
+    <% @experience.reviews.each do |review| %>
+      <div class=review_card>
+        <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
+        <h5><%= review.rating %></h5>
+        <p><%= review.content %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <!--     t.string "title"
