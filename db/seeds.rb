@@ -71,7 +71,7 @@ users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
         price_per_person: rand(50..350),
         nb_max_of_persons: rand(1..10),
         user_id: users_id.sample
-      )
+
   e.save!
 end
 

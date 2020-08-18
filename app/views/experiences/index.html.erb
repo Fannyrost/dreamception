@@ -8,57 +8,45 @@
 
 
 <div class="container mt-5">
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
-<p>I'm in the text</p>
+  <h2>Découvrez nos séjours en immersion</h2>
+
+  <h3>Sciences Fiction</h3>
+  <% @experiences.each do |experience| %>
+    <% if experience.category == "sciences fiction" %>
+      <div class="card-homepage">
+        <%= experience.title %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <h3>Histoire</h3>
+  <% @experiences.each do |experience| %>
+    <% if experience.category == "histoire" %>
+      <div class="card-homepage">
+        <%= experience.title %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <h3>Sensations</h3>
+  <% @experiences.each do |experience| %>
+    <% if experience.category == "sensations" %>
+      <div class="card-homepage">
+        <%= experience.title %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <h3>Insolite</h3>
+  <% @experiences.each do |experience| %>
+    <% if experience.category == "insolite" %>
+      <div class="card-homepage">
+        <%= experience.title %>
+      </div>
+    <% end %>
+  <% end %>
+<!--   Catégorie Sciences fiction -->
 
 
+<!--   Catégorie Sciences fiction -->
 </div>
