@@ -1,0 +1,11 @@
+.banner{
+  background-image: asset-url('banner.jpg');
+  width: 100vw;
+  height: 100vh;
+
+  .banner-content {
+    padding: 180px 400px;
+    color: white;
+  }
+
+}
