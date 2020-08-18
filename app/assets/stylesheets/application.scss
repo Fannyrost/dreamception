@@ -19,3 +19,16 @@ body {
   background: $navy-blue;
   color: $white-cream;
 }
+
+
+a {
+  text-decoration: none;
+  color: $salmon;
+  opacity: 0.8;
+
+  &:hover {
+   text-decoration: none;
+   color: $salmon;
+   opacity: 1;
+  }
+}

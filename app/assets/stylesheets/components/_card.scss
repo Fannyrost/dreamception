@@ -1,6 +1,32 @@
 .card-homepage {
   margin:0 auto;
-  width: 1110px;
-  border: 1px solid red;
+  width: 1100px;
   height: 500px;
+  background-position: center;
+
+  border-radius: 5px;
+  box-shadow: 1px 4px 10px black;
+
+  opacity: 0.8;
+
+
+  &:hover {
+  opacity: 1;
+
+  }
+}
+
+.card-hp-content {
+  filter: opacity(1);
+
+  h4 {
+
+    font-size: 35px;
+    color: $white-cream;
+  }
+
+  p {
+  font-size: 20px;
+  color: $white-cream;
+  }
 }
