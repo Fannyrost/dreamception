@@ -14,6 +14,15 @@ background-color: #023148;
   background-color: #023148;
   display: right;
   color: #F0F0F0;
+  border: solid white;
+}
+
+.display_banner_card {
+  display: flex;
+}
+
+.display_pers_price {
+  display: flex;
 }
 
 .long_description_card {
@@ -44,4 +53,8 @@ h3 {
 
 .internal_links {
   text-decoration: none;
+}
+
+#margin_price {
+  margin-left: 180px;
 }
