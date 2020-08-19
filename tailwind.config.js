@@ -2,7 +2,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'navy-blue': '#023148',
+        'navy-card': '#023148',
+        'creme-card': '#D9D9D9'
       }
     }
   },
