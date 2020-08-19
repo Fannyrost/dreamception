@@ -1,5 +1,5 @@
 class ExperiencesController < ApplicationController
-
+  skip_before_action :authenticate_user!, except: [:edit]
   def index
     @experiences = Experience.all
   end
