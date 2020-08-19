@@ -70,8 +70,8 @@ experiences_id = []
         user_id: users_id.sample,
         category: ["sciences fiction", "histoire", "sensations", "insolite"].sample
       )
-  experiences_id << e.id
   e.save!
+  experiences_id << e.id
 end
 
 20.times do

@@ -6,11 +6,11 @@
     <div class="">Modifier</div>
   </div>
   <div class="box-profil d-flex justify-content-between">
-    <div class="mx-4 my-1">
+    <div class="">
     <p>Nom : <%= @user.last_name %></p>
     <p>Prénom : <%= @user.first_name %></p>
     </div>
-    <div class="mx-4 my-1">
+    <div class="">
     <p>Email : <%= @user.email %></p>
     <p>Téléphone : <%= @user.phone_number %></p>
     </div>
@@ -21,8 +21,8 @@
       <% @user.bookings.past_bookings.each do |booking| %>
       <div class="box-exp">
         <div> <%= booking.experience.title %></div>
-        <div> <%= booking.experience.description %></div>
-        <div> <%= booking.experience.average_ratings %></div>
+        <div> <%= booking.experience.short_description %></div>
+        <div> <%= booking.experience.average_rating %></div>
       </div>
       <% end %>
     </div>
@@ -30,8 +30,8 @@
       <% @user.bookings.next_bookings.each do |booking| %>
       <div class="box-exp">
         <div> <%= booking.experience.title %></div>
-        <div> <%= booking.experience.description %></div>
-        <div> <%= booking.experience.average_ratings %></div>
+        <div> <%= booking.experience.short_description %></div>
+        <div> <%= booking.experience.average_rating %></div>
       </div>
       <% end %>
     </div>
