@@ -1,0 +1,14 @@
+
+
+
+<div class="mt-5">
+  <div class="container mt-5 w-50">
+    <%= simple_form_for [@user] do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :phone_number %>
+      <%= f.input :email %>
+      <%= f.submit 'Enregistrer' %>
+    <% end %>
+  </div>
+</div>
