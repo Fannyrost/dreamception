@@ -1,4 +1,4 @@
-<div class="navbar-blue d-flex justify-content-between fixed-top px-2">
+<div class="navbar-blue d-flex justify-content-between fixed-top px-4 align-items-end">
   <%= link_to root_path do  %>
     <div class="d-flex align-items-end">
       <div>
@@ -9,7 +9,7 @@
   <% end %>
   <div>
   <% if user_signed_in? %>
-    <%= link_to current_user.first_name, user_path(current_user) %>
+    <%= link_to "Hello, #{current_user.first_name}" , user_path(current_user) %>
   <% else %>
     <%= link_to 'Login', new_user_session_path %>
   <% end %>
