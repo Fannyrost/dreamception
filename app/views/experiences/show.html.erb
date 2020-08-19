@@ -1,1 +1,62 @@
+<div class="total-background">
 
+  <div class="d-flex align-items-center class-test">
+
+    <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527684651001-731c474bbb5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+    </div>
+      <div class="principal-presentation-card">
+        <h1><%=@experience.title %></h1>
+        <a class="internal-links" href="#reviews-list"><%=@experience.reviews.count %> avis</a>
+        <div class="d-flex">
+          <% if @experience.average_rating != nil %>
+            <% n = @experience.average_rating.truncate() %>
+            <% n.times do %>
+              <div><p><i class="fas fa-star"></i></p></div>
+            <% end %>
+            <% (5-n).times do %>
+              <div><p><i class="far fa-star"></i></p></div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <p ><%=@experience.short_description%></p>
+
+        <div class="d-flex">
+          <p><%=@experience.nb_max_of_persons %> pers max</p>
+          <p id="margin-price"><%= @experience.price_per_person %> $</p>
+        </div>
+        <p><%= link_to "Réserver", new_experience_booking_path(@experience), class: 'salmon-button' %></p>
+        <a class="internal-links" href="#detailed-description">+ Voir description détaillée</a>
+      </div>
+  </div>
+
+
+  <div class="container">
+    <h3 id="detailed-description">Description détaillée</h3>
+    <div class="long-description-card">
+      <p><%= @experience.long_description %></p>
+    </div>
+    <br><br><br>
+    <h3 id="reviews-list">Avis</h3>
+    <% @experience.reviews.each do |review| %>
+      <div class="review-card">
+        <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
+        <div class="d-flex">
+          <div class="d-flex">
+            <% if review.rating != nil %>
+              <% n = review.rating.truncate() %>
+              <% n.times do %>
+                <div><p><i class="fas fa-star"></i></p></div>
+              <% end %>
+              <% (5-n).times do %>
+                <div><p><i class="far fa-star"></i></p></div>
+              <% end %>
+            <% end %>
+          </div>
+
+          </div>
+        <p><%= review.content %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

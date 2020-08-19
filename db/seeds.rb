@@ -55,6 +55,7 @@ s_five = User.new(
           is_a_seller: false
           )
 s_five.save!
+users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 
 users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 
