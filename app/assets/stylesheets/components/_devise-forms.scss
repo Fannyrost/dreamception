@@ -9,10 +9,21 @@
   margin-bottom: 3;
   text-decoration: none;
 }
-
 .more{
   border: 2px solid black;
   border-radius: 4px;
   padding: 10%;
+}
+.input-email{
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.input-password{
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
