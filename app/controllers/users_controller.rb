@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     # else
     #   render "show_user"
     # end
+  end
 
   def edit
     @user = current_user
