@@ -1,1 +1,16 @@
-<h1>Booking#new</h1>
+<%= render 'shared/navbar' %>
+
+<div class="mt-5">
+  <div class="container mt-5 w-50">
+    <%= simple_form_for [@experience, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.input :nb_of_persons, input_html: { value: 1 } %>
+      <%= f.label(:total_price) %>
+      <%= f.text_field(:total_price, disabled: true, value: @experience.price_per_person, data: { price: @experience.price_per_person }) %>
+      <%= f.submit 'Réservez !' %>
+    <% end %>
+  </div>
+</div>
+
+
+
