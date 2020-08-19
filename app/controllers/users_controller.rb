@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     # else
     #   render "show_user"
     # end
+  end
 
   def edit
     @user = current_user
@@ -21,14 +22,9 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
-
   private
 
   def users_params
     params.require(:user).permit(:first_name, :last_name, :email, :phone_number)
-
   end
 end
-
-      # @user = User.find
-      # @user = User.find(params[:id])
