@@ -1,5 +1,5 @@
 class ExperiencesController < ApplicationController
-  def index
-    @experiences = Experience.all
+  def show
+    @experience = Experience.find(params[:id])
   end
 end
