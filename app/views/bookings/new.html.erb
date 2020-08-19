@@ -1,0 +1,20 @@
+<%= render 'shared/navbar' %>
+<h1>i'm in booking</h1>
+
+<div class="container mt-5">
+<div class="d-flex justify-content-between">
+  <div>
+    <%= simple_form_for [@experience, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.input :nb_of_persons %>
+      <%= f.submit  %>
+    <% end %>
+  </div>
+
+  <div>
+    <p>Block Js qui display le prix</p>
+  </div>
+
+</div>
+
+</div>
