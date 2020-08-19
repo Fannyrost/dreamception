@@ -1,20 +1,18 @@
 <%= render 'shared/navbar' %>
-<h1>i'm in booking</h1>
 
-<div class="container mt-5">
-<div class="d-flex justify-content-between">
-  <div>
+<div class="mt-5">
+  <div class="container mt-5 w-50">
     <%= simple_form_for [@experience, @booking] do |f| %>
       <%= f.input :date %>
-      <%= f.input :nb_of_persons %>
-      <%= f.submit  %>
+      <%= f.label(:nb_of_persons, data: {count: '1'}) %>
+      <%= f.number_field(:nb_of_persons, value: '1') %>
+      <%= f.label(:total_price) %>
+      <%= f.text_field(:total_price, disabled: true, value: @experience.price_per_person, data: { price: @experience.price_per_person }) %>
+      <%= f.submit 'Réservez !' %>
     <% end %>
   </div>
-
-  <div>
-    <p>Block Js qui display le prix</p>
-  </div>
-
 </div>
 
-</div>
+
+
+
