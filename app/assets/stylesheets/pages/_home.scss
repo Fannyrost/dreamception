@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card-homepage {
+    flex: 0 0 auto;
+  }
+}

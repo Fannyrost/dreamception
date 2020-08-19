@@ -6,12 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 User.delete_all
 Booking.delete_all
 Experience.delete_all
 Review.delete_all
-
 
 s_one = User.new(
           first_name: Faker::Name.first_name,
@@ -21,7 +19,6 @@ s_one = User.new(
           is_a_seller: false
           )
 s_one.save!
-
 
 s_two = User.new(
           first_name: Faker::Name.first_name,
@@ -60,9 +57,7 @@ s_five = User.new(
 s_five.save!
 users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 
-
 users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
-
 
 10.times do
   e = Experience.new(
@@ -76,9 +71,3 @@ users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 
   e.save!
 end
-
-
-
-
-
-
