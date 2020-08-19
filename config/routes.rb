@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   get 'users/:id', to:'users#show_user'
 
   resources :users, only: [:edit, :update, :new, :create] do
-    resources :experiences, only: [:new, :create]
+    # resources :experiences, only: [:new, :create]
 
     member do
       get 'seller', to: 'users#show_seller'
     end
   end
 
-  resources :experiences, except: [:new, :create, :destroy] do
+  resources :experiences, except: [:destroy] do
     resources :bookings, only: [:new, :create]
   end
 

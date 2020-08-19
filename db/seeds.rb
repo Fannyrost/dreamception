@@ -9,11 +9,11 @@
 
 
 
-User.delete_all
+
 Booking.delete_all
 Experience.delete_all
 Review.delete_all
-
+User.delete_all
 
 s_one = User.new(
           first_name: Faker::Name.first_name,
@@ -86,5 +86,5 @@ end
         experience_id: experiences_id.sample
       )
   b.save!
- 
+
 end
