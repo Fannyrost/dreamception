@@ -7,19 +7,19 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
 
 // HTML Tags
-
 body {
   background: $navy-blue;
   color: $white-cream;
 }
-
 
 a {
   text-decoration: none;
@@ -31,4 +31,8 @@ a {
    color: $salmon;
    opacity: 1;
   }
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
 }

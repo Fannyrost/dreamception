@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+
 User.delete_all
 Booking.delete_all
 Experience.delete_all
 Review.delete_all
+
 
 s_one = User.new(
           first_name: Faker::Name.first_name,
@@ -58,6 +62,7 @@ s_five.save!
 
 users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
 
+experiences_id = []
 10.times do
   e = Experience.new(
         title: Faker::Game.title,
@@ -65,8 +70,21 @@ users_id = [s_one.id, s_two.id, s_three.id, s_four.id, s_five.id]
         long_description: Faker::Lorem.paragraph(sentence_count: 4),
         price_per_person: rand(50..350),
         nb_max_of_persons: rand(1..10),
-        user_id: users_id.sample
+        user_id: users_id.sample,
+        category: ["sciences fiction", "histoire", "sensations", "insolite"].sample
       )
-
   e.save!
+  experiences_id << e.id
+end
+
+20.times do
+  b = Booking.new(
+        date: Faker::Date.in_date_period,
+        total_price: rand(50..900),
+        nb_of_persons: rand(1..10),
+        user_id: users_id.sample,
+        experience_id: experiences_id.sample
+      )
+  b.save!
+ 
 end
