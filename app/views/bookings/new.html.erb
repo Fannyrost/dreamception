@@ -4,8 +4,7 @@
   <div class="container mt-5 w-50">
     <%= simple_form_for [@experience, @booking] do |f| %>
       <%= f.input :date %>
-      <%= f.label(:nb_of_persons, data: {count: '1'}) %>
-      <%= f.number_field(:nb_of_persons, value: '1') %>
+      <%= f.input :nb_of_persons, input_html: { value: 1 } %>
       <%= f.label(:total_price) %>
       <%= f.text_field(:total_price, disabled: true, value: @experience.price_per_person, data: { price: @experience.price_per_person }) %>
       <%= f.submit 'Réservez !' %>
