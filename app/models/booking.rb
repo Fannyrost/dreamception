@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :experience
+  has_many :users
 
   validate :number_of_person
 
