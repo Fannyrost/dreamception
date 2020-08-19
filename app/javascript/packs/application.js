@@ -37,5 +37,4 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 
-
-
+import '../stylesheets/application.scss';
