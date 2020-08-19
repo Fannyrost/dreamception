@@ -8,11 +8,11 @@
 
 
 
-
-User.delete_all
+Review.delete_all
 Booking.delete_all
 Experience.delete_all
-Review.delete_all
+User.delete_all
+
 
 
 s_one = User.new(
@@ -86,5 +86,5 @@ end
         experience_id: experiences_id.sample
       )
   b.save!
- 
+
 end
