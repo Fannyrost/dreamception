@@ -14,16 +14,30 @@
   border-radius: 4px;
   padding: 10%;
 }
-.input-email{
-  background-color: red;
-  padding: 5px;
-  border-radius: 5px;
-  margin-top: 10px;
+.form-actions {
+  margin: 0 auto;
+  border: 1px solid salmon;
+  color: white;
 }
-.input-password{
-  background-color: black;
-  padding: 5px;
-  border-radius: 5px;
-  margin-top: 10px;
+.signin{
+  .form-control{
+    background-color: $navy-blue;
+  }
+}
+.link-signin {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: $navy-blue;
+}
+.link-signup {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: white;
+}
+.password{
+  margin: 0 auto;
+
 }
 
