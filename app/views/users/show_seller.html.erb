@@ -37,9 +37,19 @@
                 <% n.times do %>
                   <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
                 <% end %>
-                <% (5-n).times do %>
+                  <% (5-n).times do %>
                   <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
                 <% end %>
+
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-end">
+              <%= link_to 'Editer', edit_experience_path(experience), class: 'card-link-seller' %>
+              <% if experience.is_online %>
+                <%= link_to 'Désactiver', disabled_experience_path(experience), method: :patch, data: {confirm: 'Êtes-vous sûrs de vouloir désactiver l\'expérience ?'}, class: 'card-link-seller'%>
+              <% else %>
+                <%= link_to 'Activer', enabled_experience_path(experience),  method: :patch, data: {confirm: 'Êtes-vous sûrs de vouloir activer l\'expérience ?'}, class: 'card-link-seller'%>
+
               <% end %>
             </div>
           </div>
@@ -48,6 +58,14 @@
             <%= link_to 'Désactiver', '#' , class: 'card-link-seller'%>
           </div>
         </div>
+      <% end %>
+        <div class="card-seller">
+          <%= link_to new_experience_path do %>
+            <div class="card-content-seller d-flex flex-column align-items-center justify-content-center text-align-center" id="add-exp">
+                <div><h2>+</h2></div>
+                <div><h3>Ajouter une expérience</h3></div>
+            </div>
+          <% end %>
       </div>
     <% end %>
     <div class="card-seller">
