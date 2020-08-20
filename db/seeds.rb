@@ -72,7 +72,7 @@ experiences_id = []
         short_description: Faker::Lorem.paragraph(sentence_count: 1),
         long_description: Faker::Lorem.paragraph(sentence_count: 4),
         price_per_person: rand(50..350),
-        nb_max_of_persons: rand(1..10),
+        nb_max_of_persons: rand(5..10),
         user_id: users_id.sample,
         category: ["sciences fiction", "histoire", "sensations", "insolite"].sample
       )
@@ -84,7 +84,7 @@ end
   b = Booking.new(
         date: Faker::Date.in_date_period,
         total_price: rand(50..900),
-        nb_of_persons: rand(1..10),
+        nb_of_persons: rand(1..5),
         user_id: users_id.sample,
         experience_id: experiences_id.sample
       )
