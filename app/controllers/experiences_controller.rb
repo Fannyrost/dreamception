@@ -9,11 +9,6 @@ class ExperiencesController < ApplicationController
   def show
     @experience = Experience.online.find(params[:id])
     @booking = Booking.new
-    if @experience.is_online
-      render 'show'
-    else
-      render '../../../public/404.html'
-    end
   end
 
   def edit
