@@ -1,0 +1,51 @@
+.devise {
+  justify-content: center;
+  margin: auto;
+  margin-top: 180px;
+}
+.form-actions{
+  display: flex;
+  margin-top: 3;
+  margin-bottom: 3;
+  text-decoration: none;
+}
+.cancel-acc{
+  margin: 0 auto !important;
+}
+.edit{
+  margin: 0 auto !important;
+}
+.form-actions {
+  margin: 0 auto;
+  border: 1px solid salmon;
+  color: white;
+}
+.signin{
+  .form-control{
+    background-color: $navy-blue;
+  }
+}
+.link-signin {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: $navy-blue;
+}
+.link-signup {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: white;
+}
+.password{
+  margin: 0 auto;
+}
+.form-check-input{
+  display: none;
+}
+.form-check-input:checked+label{
+  color: white;
+}
+.form-check-input+label{
+  color: #023148;
+}
