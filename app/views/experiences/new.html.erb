@@ -1,0 +1,11 @@
+<%= simple_form_for (@experience) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :short_description %>
+  <%= f.input :long_description %>
+  <%= f.input :price_per_person %>
+  <%= f.input :nb_max_of_persons %>
+  <%= "Catégorie : " %>
+  <%= f.select :category, options_for_select(["sciences fiction", "histoire", "sensations", "insolite"]) %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>
