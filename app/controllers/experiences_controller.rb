@@ -3,12 +3,17 @@ class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @experiences = Experience.all
+    @experiences = Experience.online
   end
 
   def show
-    @experience = Experience.find(params[:id])
+    @experience = Experience.online.find(params[:id])
     @booking = Booking.new
+    if @experience.is_online
+      render 'show'
+    else
+      render '../../../public/404.html'
+    end
   end
 
   def edit
