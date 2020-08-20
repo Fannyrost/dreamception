@@ -1,5 +1,29 @@
 .card-seller {
-  background: $smooth-gray;
-  padding: 10px;
+  background-position: center;
+  box-shadow: 10px 10px 20px black;
+  margin-right: 20px;
+  color: $navy-blue;
+  border-radius: 5px;
+  height: 250px;
+  width: 250px;
+}
 
+.card-content-seller {
+  background: rgba(217,217,217, 0.8);
+  width: 100%;
+  padding: 5px 8px;
+
+
+
+}
+
+
+.card-link-seller {
+  font-size: 10px;
+  font-style: italic;
+}
+
+#add-exp {
+  height: 100%;
+  border-radius: 5px;
 }
