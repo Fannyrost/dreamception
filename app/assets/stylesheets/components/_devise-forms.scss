@@ -9,10 +9,35 @@
   margin-bottom: 3;
   text-decoration: none;
 }
-
 .more{
   border: 2px solid black;
   border-radius: 4px;
   padding: 10%;
+}
+.form-actions {
+  margin: 0 auto;
+  border: 1px solid salmon;
+  color: white;
+}
+.signin{
+  .form-control{
+    background-color: $navy-blue;
+  }
+}
+.link-signin {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: $navy-blue;
+}
+.link-signup {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: white;
+}
+.password{
+  margin: 0 auto;
+
 }
 

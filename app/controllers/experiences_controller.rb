@@ -1,5 +1,6 @@
 class ExperiencesController < ApplicationController
-  skip_before_action :authenticate_user!, except: [:show, :index]
+
+  skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
     @experiences = Experience.all

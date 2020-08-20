@@ -28,14 +28,15 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { updatePriceInBookings } from '../components/booking_form';
 
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
+  updatePriceInBookings();
   // Call your functions here, e.g:
   // initSelect2();
 });
 
 
-
-
+import '../stylesheets/application.scss';

@@ -15,6 +15,10 @@
   p {
     margin-bottom: 0;
   }
+
+  #password-reset {
+    margin-top : 40px;
+  }
 }
 
 .box-exp {
@@ -27,8 +31,11 @@
   color: black;
   border-radius: 5px;
   margin-bottom: 8px;
-  width: 500px;
+  width: 400px;
   p {
     margin-bottom: 0;
+    font-size: 12px;
   }
 }
+
+

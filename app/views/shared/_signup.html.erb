@@ -1,0 +1,43 @@
+<div class="signup">
+<h2 class="text-center">Sign Up</h2>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <div class="input pt-6 pb-2">
+        <%= f.input :first_name %>
+      </div>
+      <div class="input py-2">
+        <%= f.input :first_name %>
+      </div>
+      <div class="input py-2">
+        <%= f.input :phone_number, as: :integer %>
+      </div>
+      <div class="input py-2">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+      </div>
+      <div class="input py-2">
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="input py-2">
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="input py-2">
+        <%= f.input :is_a_seller, as: :boolean, label: "Je désire m'enregistrer comme un SELLER" %>
+      </div>
+    </div>
+
+    <button class="form-actions bg-creme-card hover:border py-2 px-4 rounded-full shadow">
+      <%= f.button :submit, "Sign up", style:"color: black;"%>
+    </button>
+    <% end %>
+
+</div>

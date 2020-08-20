@@ -1,10 +1,17 @@
-<div class="navbar-transparent d-flex justify-content-between fixed-top px-2">
+<div class="navbar-transparent d-flex justify-content-between fixed-top px-4 align-items-end">
+  <%= link_to root_path do  %>
+    <div class="d-flex align-items-end">
+      <div>
+        <%= image_tag 'logo-white.png', style: 'height:40px;width:auto;' %>
+      </div>
+      <div><h3>Dreamception</h3></div>
+    </div>
+  <% end %>
   <div>
-    <h3>Dreamception</h3>
-  </div>
-
-  <div>
+  <% if user_signed_in? %>
+    <%= link_to "Hello, #{current_user.first_name}" , user_path(current_user) %>
+  <% else %>
     <%= link_to 'Login', new_user_session_path %>
+  <% end %>
   </div>
 </div>
-
