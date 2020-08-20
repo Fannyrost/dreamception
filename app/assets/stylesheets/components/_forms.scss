@@ -25,9 +25,6 @@
     background-color: $navy-blue;
   }
 }
-.form-control:focus{
-  color: white !important;
-}
 .link-signin {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
@@ -42,6 +39,13 @@
 }
 .password{
   margin: 0 auto;
-
 }
-
+.form-check-input{
+  display: none;
+}
+.form-check-input:checked+label{
+  color: white;
+}
+.form-check-input+label{
+  color: #023148;
+}
