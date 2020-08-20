@@ -8,12 +8,12 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
     </div>
-    <div class="input py-2">
+    <div class="input-w py-2">
       <%= f.input :password,
                   required: false,
                   input_html: { autocomplete: "current-password" } %>
     </div>
-    <div class="input py-2">
+    <div class="input-w py-2">
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
   </div>

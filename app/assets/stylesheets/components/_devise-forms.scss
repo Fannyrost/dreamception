@@ -25,6 +25,9 @@
     background-color: $navy-blue;
   }
 }
+.form-control:focus{
+  color: white !important;
+}
 .link-signin {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
