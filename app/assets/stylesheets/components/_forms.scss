@@ -39,6 +39,13 @@
 }
 .password{
   margin: 0 auto;
-
 }
-
+.form-check-input{
+  display: none;
+}
+.form-check-input:checked+label{
+  color: white;
+}
+.form-check-input+label{
+  color: #023148;
+}
