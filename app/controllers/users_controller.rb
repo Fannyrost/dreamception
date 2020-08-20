@@ -2,14 +2,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @user = User.first
-    render "show_seller"
-
-    # if current_user.is_a_seller?
-    #   render "show_seller"
-    # else
-    #   render "show_user"
-    # end
+    @user = current_user
+    if @user.is_a_seller?
+      render "show_seller"
+    else
+      render "show_user"
+    end
+  end
 
   def edit
     @user = current_user
@@ -20,7 +19,6 @@ class UsersController < ApplicationController
     @user.update(users_params)
     redirect_to user_path(@user)
   end
-
 
   private
 
