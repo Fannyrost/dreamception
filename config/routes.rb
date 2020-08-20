@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'visitors/show'
-  root to: 'experiences#index'
-  # # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
 
   resources :users, only: [:show, :edit, :update, :new, :create]
 
@@ -15,7 +11,8 @@ Rails.application.routes.draw do
       patch "enabled ", to: 'experiences#enabled', as: 'enabled'
     end
 
+    resources :reviews, only: [:new, :create]
   end
 
-
+  root to: 'experiences#index'
 end
