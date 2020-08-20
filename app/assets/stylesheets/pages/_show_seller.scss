@@ -7,4 +7,42 @@
   background: $smooth-gray;
   color: black;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
+
+
+.seller-historical {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 4px solid $salmon;
+  background: $smooth-gray;
+  color: black;
+  border-radius: 5px;
+  }
+
+// #historical-title {
+//   margin-top: 30px;
+// }
+
+// .past-exp-seller:active {
+//   display: visible;
+// }
+
+#item1 {
+  display: none;
+}
+
+#item2 {
+  display: none;
+}
+
+#item1:target {
+  display: block;
+}
+
+#item2:target {
+  display: block;
+}
+
