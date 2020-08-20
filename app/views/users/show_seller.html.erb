@@ -5,7 +5,7 @@
 
   <div class= "d-flex justify-content-between align-items-center">
     <div class=""><h2>Mon profil</h2></div>
-    <div class="">Modifier</div>
+    <div><%= link_to 'Modifier mon profil', edit_user_path(@user.id), class: 'salmon-button' %></div>
   </div>
   <div class="box-profil d-flex justify-content-between">
     <div class="">
@@ -15,14 +15,9 @@
     <div class="">
       <p>Email : <%= @user.email %></p>
       <p>Téléphone : <%= @user.phone_number %></p>
+      <span class="mt-2"><%= link_to 'Modifier mon mot de passe',  edit_user_password_path, class: 'salmon-button' %></span>
     </div>
   </div>
-
-
-
-
-
-
 
 
   <div id="historical-title" class=""><h2>Mon historique vendeur</h2></div>
