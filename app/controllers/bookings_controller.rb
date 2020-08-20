@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
-  def new
-    @experience = Experience.find(params[:experience_id])
-    @booking = Booking.new
-  end
+  # def new
+  #   @experience = Experience.find(params[:experience_id])
+  #   @booking = Booking.new
+  # end
 
   def create
     @booking = Booking.new(booking_params)
