@@ -36,9 +36,9 @@
           <%= f.input :nb_of_persons, input_html: { value: 1 } %>
         </div>
         <div class="d-flex">
-          <%= f.label(:total_price) %>
-          <span><%= f.text_field(:total_price, disabled: true, value: @experience.price_per_person, data: { price: @experience.price_per_person }) %></span>
-          <span class="ml-1"> <%= f.submit 'Réservez !' %></span>
+          <%= f.label(:total_price, input_html: {class: 'flex-grow-1'}) %>
+          <%= f.text_field(:total_price, disabled: true, value: @experience.price_per_person, data: { price: @experience.price_per_person }, input_html: {class: 'w-25'}) %>
+          <%= f.submit 'Réservez !', input_html: {class: 'ml-1'} %>
         </div>
       <% end %>
     </div>

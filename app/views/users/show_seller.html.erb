@@ -41,7 +41,11 @@
             </div>
             <div class="d-flex flex-column align-items-end">
               <%= link_to 'Editer', edit_experience_path(experience), class: 'card-link-seller' %>
-              <%= link_to 'Désactiver', '#' , class: 'card-link-seller'%>
+              <% if experience.is_online %>
+                <%= link_to 'Désactiver', disabled_experience_path(experience), method: :patch, data: {confirm: 'Êtes-vous sûrs de vouloir désactiver l\'expérience ?'}, class: 'card-link-seller'%>
+              <% else %>
+                <%= link_to 'Activer', enabled_experience_path(experience),  method: :patch, data: {confirm: 'Êtes-vous sûrs de vouloir activer l\'expérience ?'}, class: 'card-link-seller'%>
+              <% end %>
             </div>
           </div>
         </div>

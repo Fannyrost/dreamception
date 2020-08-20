@@ -36,6 +36,20 @@ class ExperiencesController < ApplicationController
     end
   end
 
+  def disabled
+    @experience = Experience.find(params[:id])
+    @experience.is_online = false
+    @experience.save!
+    redirect_back(fallback_location: user_path(current_user.id))
+  end
+
+  def enabled
+    @experience = Experience.find(params[:id])
+    @experience.is_online = true
+    @experience.save!
+    redirect_back(fallback_location: user_path(current_user.id))
+  end
+
   private
 
   def experience_params
