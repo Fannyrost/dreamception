@@ -1,0 +1,11 @@
+<div class="cancel-acc lg:w-48">
+  <h4 class="text-center text-xl text-creme-card">Cancel my account</h4>
+  <p class="flex flex-col text-center text-creme-card pt-3">Unhappy?</p>
+  <button class="form-actions text-navy-card bg-creme-card hover:border py-2 px-4 my-3 rounded-full shadow">
+    <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+  </button>
+  <button class="form-actions text-creme-card bg-salmon hover:border py-2 px-4 my-3 rounded-full shadow">
+    <%= link_to "Back", :back %>
+  </button>
+
+</div>

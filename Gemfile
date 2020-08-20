@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'faker'
 gem 'awesome_print'
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.12.0'
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

@@ -8,10 +8,13 @@
 
 
 
+
+
 Review.delete_all
 Booking.delete_all
 Experience.delete_all
 User.delete_all
+
 
 
 

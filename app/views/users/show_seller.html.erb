@@ -1,24 +1,59 @@
 <%= render 'shared/navbar' %>
-
-<div class="container show-user">
-
-
-  <div class= "d-flex justify-content-between align-items-center">
-    <div class=""><h2>Mon profil</h2></div>
+<div class="container show-user w-75">
+  <div class= "d-flex justify-content-between align-items-center mb-3">
+    <div >
+      <h2>Mon profil</h2>
+    </div>
     <div><%= link_to 'Modifier mon profil', edit_user_path(@user.id), class: 'salmon-button' %></div>
   </div>
   <div class="box-profil d-flex justify-content-between">
-    <div class="">
+    <div>
       <p>Nom : <%= @user.last_name %></p>
       <p>Prénom : <%= @user.first_name %></p>
     </div>
-    <div class="">
+    <div>
       <p>Email : <%= @user.email %></p>
       <p>Téléphone : <%= @user.phone_number %></p>
       <span class="mt-2"><%= link_to 'Modifier mon mot de passe',  edit_user_password_path, class: 'salmon-button' %></span>
     </div>
   </div>
+  
+   <div class="mt-3"><h2> Mes experiences </h2></div>
+    <div class="owned-exps d-flex justify-content-start my-4 ">
+      <% @user.experiences.each do |experience| %>
+        <div class="card-seller d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')" >
+          <div class="card-content-seller d-flex justify-content-between align-items-end">
+            <div>
+              <%= link_to experience.title , experience_path(experience)   %>
+              <div class="d-flex">
+                <% if experience.average_rating != nil %>
+                  <% n = experience.average_rating.truncate() %>
+                  <% n.times do %>
+                    <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
+                  <% end %>
+                  <% (5-n).times do %>
+                    <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-end">
+              <%= link_to 'Editer', edit_experience_path(experience), class: 'card-link-seller' %>
+              <%= link_to 'Désactiver', '#' , class: 'card-link-seller'%>
+            </div>
+          </div>
+        </div>
+      <% end %>
+        <div class="card-seller">
+          <%= link_to new_experience_path do %>
+            <div class="card-content-seller d-flex flex-column align-items-center justify-content-center" id="add-exp">
+                <div> <h2>+</h2></div>
+                <div><h3>Ajouter une expérience</h3> </div>
+            </div>
+          <% end %>
+        </div>
 
+    </div>
 
   <div id="historical-title" class=""><h2>Mon historique vendeur</h2></div>
 
@@ -52,11 +87,6 @@
               <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
               <% end %>
             <% end %>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
 
   <div class="mt-3 futur-exp-seller active id=item2">
   <% @user.experiences.each do |experience| %>
@@ -70,6 +100,7 @@
         <p>Email : <%= booking.user.email %></p>
         <p>Téléphone : <%= booking.user.phone_number %></p>
       </div>
+
     <% end %>
   <% end %>
   </div>
@@ -122,4 +153,41 @@
   </div>
 </div>
 </div>
+
+      <div class="user_future_experiences">
+        <div class="box-next-exp"><h3>Expériences à venir</h3>
+          <% @user.bookings.next_bookings.each do |booking| %>
+            <div class="box-exp">
+                  <p> <%= booking.experience.title %></p>
+                  <p> <%= booking.experience.short_description %></p>
+                  <p> <%= booking.experience.average_rating %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  <div class="display-box-seller">
+    <div class="seller_futur_experiences">
+      <div class="mt-3"><h1> Historique Vendeur</h1></div>
+        <% @user.experiences.each do |experience| %>
+          <% experience.bookings.each do |booking| %>
+            <div class="box-exp">
+              <h1><%= booking.experience.title %></h1>
+              <p><%= booking.experience.short_description %> <%= booking.experience.average_rating %></p>
+              <p><%= booking.experience.average_rating %></p>
+              <p>Informations client</p> <%= booking.user.first_name %>
+              <p><%= booking.user.last_name %></p>
+              <p><%= booking.user.phone_number %></p>
+              <p><%= booking.user.email %></p>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+    <div class="seller_past_experiences">
+    </div>
+  </div>
+
+  </div>
+
 </div>
