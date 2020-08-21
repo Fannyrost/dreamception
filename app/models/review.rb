@@ -5,7 +5,7 @@ class Review < ApplicationRecord
   validate :user_assisted
 
   def user_assisted
-    if user != experience.user
+    unless user.lived_experiences.include?(experience)
       errors.add(:user_id)
     end
   end

@@ -11,11 +11,12 @@ class ReviewsController < ApplicationController
     @experience = Experience.find(params[:experience_id])
     @review.experience = @experience
     @review.user = current_user
-      if @review.save
-        redirect_to users_profile_path
-      else
-        render :new
-      end
+
+    if @review.save
+      redirect_to experiences_path, notice: 'Merci pour votre review'
+    else
+      render :new
+    end
   end
 
   private

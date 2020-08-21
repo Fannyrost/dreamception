@@ -1,5 +1,4 @@
 class ExperiencesController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
@@ -49,6 +48,7 @@ class ExperiencesController < ApplicationController
     @experience.save!
     redirect_back(fallback_location: user_path(current_user.id))
   end
+
 
   private
 
