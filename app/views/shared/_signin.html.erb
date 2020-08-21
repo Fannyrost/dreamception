@@ -1,4 +1,9 @@
 <div class="signin">
+
+  <div class="arrow-blue">
+    <%= render 'shared/arrow-back' %>
+  </div>
+
 <h2 class="text-center">Sign In</h2>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
