@@ -29,14 +29,20 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { updatePriceInBookings } from '../components/booking_form';
-
+import { tabsSellerSwitch } from '../components/tabs';
+import { tabsCustomerSwitch } from '../components/tabs_customer';
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   updatePriceInBookings();
+  tabsSellerSwitch();
+  tabsCustomerSwitch();
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+  tabsSellerSwitch();
+  tabsCustomerSwitch();
 
 
 import '../stylesheets/application.scss';

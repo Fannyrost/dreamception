@@ -11,7 +11,7 @@
 }
 
 
-.seller-historical {
+.cards-box {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 24px;
@@ -20,15 +20,12 @@
   background: $smooth-gray;
   color: black;
   border-radius: 5px;
+  width : 500px;
+
   }
 
-// #historical-title {
-//   margin-top: 30px;
-// }
 
-// .past-exp-seller:active {
-//   display: visible;
-// }
+
 
 #item1 {
   display: none;
@@ -46,3 +43,57 @@
   display: block;
 }
 
+
+.cards-box-seller {
+  background-color: #E8E8E8;
+  width: 450px;
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+
+.active-seller, .active-customer {
+  visibility: visible;
+  width: 100%;
+  background-color: $smooth-gray;
+  border: 1px solid $salmon;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.inactive-seller, .inactive-customer {
+  display: none;
+}
+
+
+.t-seller-active, .t-customer-active {
+  background-color: $smooth-gray;
+  color: $navy-blue;
+  font-size: 15px;
+  border-top:    1px solid $salmon;
+  border-right:  1px solid $salmon;
+  border-left:   1px solid $salmon;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+
+.t-seller-inactive, .t-customer-inactive {
+  font-size: 15px;
+  background: #E8E8E8;
+  color: $navy-blue;
+  border-top:    1px solid $smooth-gray;
+  border-right:  1px solid $smooth-gray;
+  border-left:   1px solid $smooth-gray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+
+// #box-historic {
+//   padding-left: 50px;
+// }
