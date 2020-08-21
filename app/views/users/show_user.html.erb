@@ -5,7 +5,7 @@
     <div >
       <h1>Mon profil</h1>
     </div>
-    <div><%= link_to 'Modifier mon profil',  edit_user_registration_path(@user), class: 'salmon-button' %></div>
+    <div><%= link_to 'Modifier mon profil',  edit_user_path(@user), class: 'salmon-button' %></div>
   </div>
   <div class="box-profil d-flex justify-content-between">
     <div>
@@ -15,7 +15,7 @@
     <div>
       <p>Email : <%= @user.email %></p>
       <p>Téléphone : <%= @user.phone_number %></p>
-      <span class="mt-2"><%= link_to 'Modifier mon mot de passe',  edit_user_password_path, class: 'salmon-button' %></span>
+      <span class="mt-2"><%= link_to 'Modifier mon mot de passe',  edit_user_registration_path(@user), class: 'salmon-button' %></span>
     </div>
   </div>
   <div class="my-3">
