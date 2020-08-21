@@ -1,14 +1,19 @@
 
+<%= render 'shared/navbar'%>
 
-
-<div class="mt-5">
-  <div class="container mt-5 w-50">
+<div class="container block lg:mt-48 mt-32">
+  <h2>Modifier vos informations utilisateur :</h2>
+  <div class="lg:pt-20 pt-10 pl-20 pr-20 text-black rounded-lg lg:mr-1 pb-4 mb-2 bg-creme-card">
     <%= simple_form_for [@user] do |f| %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :phone_number %>
       <%= f.input :email %>
-      <%= f.submit 'Enregistrer' %>
+      <div class= "d-flex align-items-center">
+        <%= f.check_box :is_a_seller, as: :boolean, default: false %>
+        <%= f.label :seller?, class: ' ml-2'%>
+      </div>
+      <%= f.submit 'Enregistrer', class: 'btn-salmon ml-1 mt-3' %>
     <% end %>
   </div>
 </div>
