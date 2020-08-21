@@ -10,17 +10,17 @@
   <div>
   <% if user_signed_in? %>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle f-size-24px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%= "Bonjour, #{current_user.first_name}"%>
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <p><%= link_to "Votre profil" , user_path(current_user), class: "dropdown-item"  %></p>
       <div class="dropdown-divider"></div>
-      <p><%= link_to "Log out" , destroy_user_session_path, class: "dropdown-item"  %></p>
+      <p><%= link_to "Log out" , destroy_user_session_path, method: :delete, class: "dropdown-item"  %></p>
     </div>
   </li>
   <% else %>
-    <%= link_to 'Login', new_user_session_path %>
+    <%= link_to 'Login', new_user_session_path, class:"f-size-24px" %>
   <% end %>
   </div>
 </div>

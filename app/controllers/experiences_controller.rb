@@ -3,11 +3,12 @@ class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @experiences = Experience.all
+    @experiences = Experience.online
   end
 
   def show
-    @experience = Experience.find(params[:id])
+    @experience = Experience.online.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit
@@ -33,6 +34,20 @@ class ExperiencesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def disabled
+    @experience = Experience.find(params[:id])
+    @experience.is_online = false
+    @experience.save!
+    redirect_back(fallback_location: user_path(current_user.id))
+  end
+
+  def enabled
+    @experience = Experience.find(params[:id])
+    @experience.is_online = true
+    @experience.save!
+    redirect_back(fallback_location: user_path(current_user.id))
   end
 
   private

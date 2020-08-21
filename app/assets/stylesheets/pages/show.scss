@@ -1,49 +1,51 @@
-.total-background {
-background-color: #023148;
+
+.banner-show{
+  background-size: cover;
+  width: 92vw;
+  height: 100vh;
 }
 
-.class-test {
-  margin-bottom: 100px;
-}
-.banner-show{
-  background-image: url("https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-  background-size: cover;
-  width: 40%;
-  height: 960px;
-}
+
 
 .principal-presentation-card {
-  width: 450px;
-  background-color: #023148;
-  display: right;
-  color: #F0F0F0;
-  margin-left: 200px;
+  padding-top: 150px;
+  margin-left: 990px;
+  width: 650px;
+  color: $white-cream;
+  padding-left: 55px;
 }
 
 
-.long-description-card {
-  border: solid 2px #FF6856;
+.long-card {
+  border: solid 2px $salmon;
   border-radius: 5px;
   background-color: #D9D9D9;
   color: black;
+  padding: 10px;
 }
-.review-card {
-  border: solid 2px #FF6856;
-  border-radius: 5px;
-  background-color: #D9D9D9;
-  color: black;
-  margin-bottom: 20px;
-}
+
 
 h3 {
-  color: #F0F0F0;
+  color: $white-cream;
   margin-bottom: 15px;
 }
 
-.internal-links {
-  text-decoration: none;
+#book {
+  width: 100%;
+  background-color: $salmon;
+  color: $white-cream;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+
 }
 
-#margin-price {
-  margin-left: 180px;
+.form-book-show {
+  // background-color: $smooth-gray;
+  border: 2px solid $salmon;
+  color: $white-cream;
+  border-radius: 5px;
+  padding: 5px;
 }
+
