@@ -73,6 +73,7 @@ experiences_id = []
         long_description: Faker::Lorem.paragraph(sentence_count: 4),
         price_per_person: rand(50..350),
         nb_max_of_persons: rand(5..10),
+        is_online: true,
         user_id: users_id.sample,
         category: ["sciences fiction", "histoire", "sensations", "insolite"].sample
       )
