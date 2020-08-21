@@ -43,7 +43,9 @@
                 <% end %>
               <% end %>
             </div>
-          <div><p><em>Leave a review!</em></p></div>
+          <div style="font-weight: bold;">
+            <%= link_to "Leave a review!",new_experience_review_path(booking.experience) %>
+          </div>
           </div>
       </div>
       <% end %>
