@@ -29,7 +29,7 @@
           <div>
             <h4><%= link_to booking.experience.title, experience_path(booking.experience) %></h4>
             <p><%= booking.experience.short_description %></p>
-            <p>Effectuée le <%= @booking.date %></p>
+            <p>Effectuée le <%= booking.date %></p>
           </div>
           <div>
             <div class="d-flex">
@@ -57,7 +57,7 @@
           <div>
             <h4><%= link_to booking.experience.title, experience_path(booking.experience) %></h4>
             <p><%= booking.experience.short_description %></p>
-            <p>Votre réservation est pour le le <%= @booking.date %></p>
+            <p>Votre réservation est pour le le <%= booking.date %></p>
           </div>
           <div class="d-flex">
             <% if booking.experience.average_rating != nil %>
