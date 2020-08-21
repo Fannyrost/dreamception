@@ -49,3 +49,33 @@
 .form-check-input+label{
   color: #023148;
 }
+
+.form-book-show {
+  // background-color: $smooth-gray;
+  border: 2px solid $salmon;
+  color: $white-cream;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-form {
+  background-color: salmon;
+  color: black;
+}
+
+.form-color-price {
+  color: black;
+  text-align: center;
+  border-radius:2px;
+  margin:2px;
+}
+
+.btn-salmon {
+  color: black;
+  background-color: salmon;
+  text-align: center;
+  border-radius:2px;
+  margin:2px;
+  padding: 4px;
+  width: 150px;
+}
