@@ -49,6 +49,7 @@ class ExperiencesController < ApplicationController
     redirect_back(fallback_location: user_path(current_user.id))
   end
 
+
   private
 
   def experience_params
