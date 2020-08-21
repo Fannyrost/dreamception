@@ -3,49 +3,96 @@
   margin: auto;
   margin-top: 180px;
 }
+
 .form-actions{
   display: flex;
   margin-top: 3;
   margin-bottom: 3;
   text-decoration: none;
 }
+
 .cancel-acc{
   margin: 0 auto !important;
 }
+
 .edit{
   margin: 0 auto !important;
 }
+
 .form-actions {
   margin: 0 auto;
   border: 1px solid salmon;
   color: white;
 }
+
 .signin{
   .form-control{
     background-color: $navy-blue;
   }
 }
+
 .link-signin {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
   font-weight: bold;
   color: $navy-blue;
 }
+
 .link-signup {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
   font-weight: bold;
   color: white;
 }
+
 .password{
   margin: 0 auto;
 }
+
 .form-check-input{
   display: none;
 }
+
 .form-check-input:checked+label{
   color: white;
 }
+
 .form-check-input+label{
   color: #023148;
+}
+
+
+.form-book-show {
+  // background-color: $smooth-gray;
+  border: 2px solid $salmon;
+  color: $white-cream;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-form {
+  background-color: salmon;
+  color: black;
+}
+
+.form-color-price {
+  color: black;
+  text-align: center;
+  border-radius:2px;
+  margin:2px;
+}
+
+.btn-salmon {
+  color: black;
+  background-color: salmon;
+  text-align: center;
+  border-radius:2px;
+  margin:2px;
+  padding: 4px;
+  width: 150px;
+}
+
+input[type="checkbox"]{
+  visibility: visible;
+
 }

@@ -10,130 +10,130 @@
 
 <div class="container mt-5">
   <h2>Découvrez nos séjours en immersion</h2>
-    <h3 class="mt-5 mb-3">Sciences Fiction</h3>
+  <h3 class="mt-5 mb-3">Sciences Fiction</h3>
 </div>
-  <div class="scrolling-wrapper">
-    <% @experiences.each do |experience| %>
-      <% if experience.category == "sciences fiction" %>
-        <%= link_to experience_path(experience) do %>
-          <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
-            <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
-              <div>
-                <h4> <%= experience.title %> </h4>
-                <p><%= experience.short_description %></p>
-              </div>
-              <div class="d-flex">
-                <% if experience.average_rating != nil %>
-                  <% n = experience.average_rating.truncate() %>
-                  <% n.times do %>
-                    <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
-                  <% end %>
-                  <% (5-n).times do %>
-                    <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
-                  <% end %>
-                <% end %>
-              </div>
-            </div>
-          </div>
+<div class="scrolling-wrapper">
+  <% @experiences.each do |experience| %>
+  <% if experience.category == "sciences fiction" %>
+  <%= link_to experience_path(experience) do %>
+  <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>'); background-size: cover !important;">
+    <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
+      <div>
+        <h4> <%= experience.title %> </h4>
+        <p><%= experience.short_description %></p>
+      </div>
+      <div class="d-flex">
+        <% if experience.average_rating != nil %>
+        <% n = experience.average_rating.truncate() %>
+        <% n.times do %>
+        <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
         <% end %>
-      <% end %>
-    <% end %>
+        <% (5-n).times do %>
+        <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
+  <% end %>
+  <% end %>
+  <% end %>
+</div>
 
 <div class="container mt-5">
  <h3 class="mt-5 mb-3">Histoire</h3>
 </div>
 <div class="scrolling-wrapper">
  <% @experiences.each do |experience| %>
-   <% if experience.category == "histoire" %>
-     <%= link_to experience_path(experience) do %>
-       <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
-         <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
-           <div>
-             <h4> <%= experience.title %> </h4>
-             <p><%= experience.short_description %></p>
-           </div>
-           <div class="d-flex">
-             <% if experience.average_rating != nil %>
-             <% n = experience.average_rating.truncate() %>
-             <% n.times do %>
-               <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
-             <% end %>
-             <% (5-n).times do %>
-               <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
-             <% end %>
-             <% end %>
-           </div>
-         </div>
-       </div>
-     <% end %>
-   <% end %>
+ <% if experience.category == "histoire" %>
+ <%= link_to experience_path(experience) do %>
+ <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
+   <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
+     <div>
+       <h4> <%= experience.title %> </h4>
+       <p><%= experience.short_description %></p>
+     </div>
+     <div class="d-flex">
+       <% if experience.average_rating != nil %>
+       <% n = experience.average_rating.truncate() %>
+       <% n.times do %>
+       <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
+       <% end %>
+       <% (5-n).times do %>
+       <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
+       <% end %>
+       <% end %>
+     </div>
+   </div>
+ </div>
+ <% end %>
+ <% end %>
  <% end %>
 </div>
 
 <div class="container mt-5">
-   <h3 class="mt-5 mb-3">Sensations</h3>
+ <h3 class="mt-5 mb-3">Sensations</h3>
 </div>
- <div class="scrolling-wrapper">
-   <% @experiences.each do |experience| %>
-     <% if experience.category == "sensations" %>
-       <%= link_to experience_path(experience) do %>
-         <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
-           <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
-             <div>
-               <h4> <%= experience.title %> </h4>
-               <p><%= experience.short_description %></p>
-             </div>
-             <div class="d-flex">
-               <% if experience.average_rating != nil %>
-               <% n = experience.average_rating.truncate() %>
-               <% n.times do %>
-                 <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
-               <% end %>
-               <% (5-n).times do %>
-                 <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
-               <% end %>
-               <% end %>
-             </div>
-           </div>
-         </div>
+<div class="scrolling-wrapper">
+ <% @experiences.each do |experience| %>
+ <% if experience.category == "sensations" %>
+ <%= link_to experience_path(experience) do %>
+ <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
+   <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
+     <div>
+       <h4> <%= experience.title %> </h4>
+       <p><%= experience.short_description %></p>
+     </div>
+     <div class="d-flex">
+       <% if experience.average_rating != nil %>
+       <% n = experience.average_rating.truncate() %>
+       <% n.times do %>
+       <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
        <% end %>
-     <% end %>
-   <% end %>
- </div>
-
-
- <div class="container mt-5">
-     <h3 class="mt-5 mb-3">Insolite</h3>
- </div>
-
- <div class="scrolling-wrapper">
-   <% @experiences.each do |experience| %>
-     <% if experience.category == "insolite" %>
-       <%= link_to experience_path(experience) do %>
-         <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
-           <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
-             <div>
-               <h4> <%= experience.title %> </h4>
-               <p><%= experience.short_description %></p>
-             </div>
-             <div class="d-flex">
-               <% if experience.average_rating != nil %>
-                 <% n = experience.average_rating.truncate() %>
-                 <% n.times do %>
-                   <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
-                 <% end %>
-                 <% (5-n).times do %>
-                   <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
-                 <% end %>
-               <% end %>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    <% end %>
+       <% (5-n).times do %>
+       <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
+       <% end %>
+       <% end %>
+     </div>
    </div>
+ </div>
+ <% end %>
+ <% end %>
+ <% end %>
+</div>
+
+
+<div class="container mt-5">
+ <h3 class="mt-5 mb-3">Insolite</h3>
+</div>
+
+<div class="scrolling-wrapper">
+ <% @experiences.each do |experience| %>
+ <% if experience.category == "insolite" %>
+ <%= link_to experience_path(experience) do %>
+ <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
+   <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
+     <div>
+       <h4> <%= experience.title %> </h4>
+       <p><%= experience.short_description %></p>
+     </div>
+     <div class="d-flex">
+       <% if experience.average_rating != nil %>
+       <% n = experience.average_rating.truncate() %>
+       <% n.times do %>
+       <div><p><span  class="stars"><i class="fas fa-star"></i></span></p></div>
+       <% end %>
+       <% (5-n).times do %>
+       <div><p><span  class="stars"><i class="far fa-star"></i></span></p></div>
+       <% end %>
+       <% end %>
+     </div>
+   </div>
+ </div>
+ <% end %>
+ <% end %>
+ <% end %>
+</div>
 </div>
 
 
