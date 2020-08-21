@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_122239) do
+ActiveRecord::Schema.define(version: 2020_08_20_122260) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_08_20_122239) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "average_rating"
-    t.boolean "is_online"
+    t.boolean "is_online", default: true
     t.string "category"
     t.string "photo_url"
     t.index ["user_id"], name: "index_experiences_on_user_id"
