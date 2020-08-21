@@ -16,7 +16,7 @@
   <% @experiences.each do |experience| %>
   <% if experience.category == "sciences fiction" %>
   <%= link_to experience_path(experience) do %>
-  <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>')">
+  <div class="card-homepage d-flex align-items-end" style= "background-image: url('<%= photo_for(experience) %>'); background-size: cover !important;">
     <div class="card-hp-content px-5 pt-2 pb-1 d-flex justify-content-between">
       <div>
         <h4> <%= experience.title %> </h4>
