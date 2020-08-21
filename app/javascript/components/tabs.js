@@ -1,5 +1,4 @@
 const tabsSwitch = () => {
-  console.log("hello");
   const tabs = document.querySelectorAll(".tab");
 
 
